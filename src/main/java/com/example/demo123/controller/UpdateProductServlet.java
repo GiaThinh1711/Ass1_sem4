@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class UpdateProductServlet extends HttpServlet {
     ProductModel model = new ProductModel();
@@ -41,7 +42,7 @@ public class UpdateProductServlet extends HttpServlet {
             String avatar = req.getParameter("avatar");
             double price = Double.parseDouble(req.getParameter("price"));
             String createdAt = req.getParameter("createdAt");
-            String updatedAt = req.getParameter("updatedAt");
+            String updatedAt = LocalDateTime.now().toString();
             String status = req.getParameter("status");
             obj.setFood_code(food_code);
             obj.setName(name);

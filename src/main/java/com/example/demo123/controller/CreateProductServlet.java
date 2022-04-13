@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 public class CreateProductServlet extends HttpServlet {
     @Override
@@ -32,9 +33,9 @@ public class CreateProductServlet extends HttpServlet {
 
         double price = Double.parseDouble(req.getParameter("price"));
 
-        String createdAt = req.getParameter("createdAt");
+        String createdAt = LocalDateTime.now().toString();
 
-        String updatedAt = req.getParameter("updatedAt");
+        String updatedAt = LocalDateTime.now().toString();
 
         String status = req.getParameter("status");
 

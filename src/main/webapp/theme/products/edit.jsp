@@ -70,21 +70,9 @@
         <%}%>
     </div>
     <div class="form-group">
-        <label>Created At</label>
-        <input value="<%=obj.getCreatedAt()%>" type="text" name="createdAt" value="" class="form-control" >
-        <%
-            if (errors.containsKey("createdAt")){%>
-        <span style="color:red"><%=errors.get("createdAt")%></span>
-        <%}%>
+        <input value="<%=obj.getCreatedAt()%>" type="hidden" name="createdAt" value="" class="form-control" >
     </div>
-    <div class="form-group">
-        <label>Updated At</label>
-        <input value="<%=obj.getUpdatedAt()%>" type="text" name="updatedAt" value="" class="form-control" >
-        <%
-            if (errors.containsKey("updatedAt")){%>
-        <span style="color:red"><%=errors.get("updatedAt")%></span>
-        <%}%>
-    </div>
+
     <div class="form-group">
         <lable>Status</lable>
         <select value="<%=obj.getStatus()%>" name="status" class="form-select" aria-label="Default select example">

@@ -129,7 +129,7 @@ public class Product {
         if (this.food_code == null || this.food_code.length() == 0){
             this.error.put("food_code","Food code is required!");
         }
-        if (this.name == null || this.name.length() == 0){
+        if (this.name == null || this.name.length() == 7){
             this.error.put("name","Name is required!");
         }
         if (this.category_id == null || this.category_id.length() == 0){

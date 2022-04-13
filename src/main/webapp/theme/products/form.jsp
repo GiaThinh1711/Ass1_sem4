@@ -67,22 +67,7 @@ if (errors == null){
         <span style="color:red"><%=errors.get("price")%></span>
         <%}%>
     </div>
-    <div class="form-group">
-        <label>Created At</label>
-        <input type="text" name="createdAt" value="" class="form-control" >
-        <%
-            if (errors.containsKey("createdAt")){%>
-        <span style="color:red"><%=errors.get("createdAt")%></span>
-        <%}%>
-    </div>
-    <div class="form-group">
-        <label>Updated At</label>
-        <input type="text" name="updatedAt" value="" class="form-control" >
-        <%
-            if (errors.containsKey("updatedAt")){%>
-        <span style="color:red"><%=errors.get("updatedAt")%></span>
-        <%}%>
-    </div>
+
     <div class="form-group">
         <lable>Status</lable>
         <select name="status" class="form-select" aria-label="Default select example">

@@ -24,7 +24,7 @@
             height: 100px;
             padding: 10px 90px;
             box-sizing: border-box;
-            background-color: rgba(0,0,0,0.6);
+            background-color: rgba(255, 255, 255, 0.6);
             border-bottom: 1px solid #ffffff;
         }
         nav .logo{
@@ -40,25 +40,23 @@
             text-align: center;
             list-style: none;
         }
+        a{
+            text-decoration:none;
+            color: black;
+        }
     </style>
 </head>
 <body>
 <nav>
-    <div class="logo col-md-2">
-        <video src="https://www.canva.com/design/DAE9r2iojF8/AbTD2CU6WKniwuL2z-I8bw/watch?utm_content=DAE9r2iojF8&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel"></video>
-    </div>
     <div class="option col-md-10">
         <ul>
-            <li class="col-md-2"><a href="#">Home</a></li>
-            <li class="col-md-2"><a href="#">Create</a></li>
-            <li class="col-md-2"><a href="#">Login</a></li>
-            <li class="col-md-2"><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+            <li class="col-md-2"><img style="width:200px; position:absolute;top: -44px; text-align: center;right: -600px" src="https://arts.homeup.vn/images/LOGO.png" alt=""></li>
         </ul>
     </div>
 
 </nav>
 <table class="table">
-    <h1 style="text-align:center">List Product</h1>
+    <h1 style="text-align:center;margin-top: 40px">List Product</h1>
     <thead class="thead-light">
     <tr>
         <th scope="col">Id</th>
@@ -92,13 +90,14 @@
         <td><%=pr.getUpdatedAt()%></td>
         <td><%=pr.getStatus()%></td>
         <td><a href="/foods/delete?id=<%=pr.getId()%>"><button >Delete</button></a> |
-            <a href="/foods/update?id=<%=pr.getId()%>"><button >Update</button></a> |
+            <a href="/foods/update?id=<%=pr.getId()%>"><button >Update</button></a>
         </td>
     </tr>
     <%}%>
     </tbody>
 </table>
-<a href="/foods/create">Create</a>
+<div style="text-align:center"><a style="text-decoration:none;text-align:center" href="/foods/create"><button>Create</button></a>
+</div>
 <script src="https://kit.fontawesome.com/103cc0b0bf.js" crossorigin="anonymous"></script>
 </body>
 </html>
